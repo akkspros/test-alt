@@ -4,15 +4,19 @@
 
 <meta charset="UTF-8" />
 
-<title>Test form elements</title>
+<title>Test alt attribute</title>
 
 <meta name="robots" content="noindex, nofollow">
 
 <style type="text/css">
 	body {
 		font-family: sans-serif;
-		line-height: 2;
-		padding: 1% 5%;
+		line-height: 1.6;
+		padding: 1% 5% 5%;
+	}
+
+	li {
+		margin-bottom: 1em;
 	}
 </style>
 
@@ -30,6 +34,27 @@
 <img src="assets/images/image-150x150.jpg" alt=" ">
 
 <p>Some text after.</p>
+
+<h2>Test results</h2>
+<p>February 10, 2017.</p>
+
+<ul>
+<li>
+VoiceOver - Safari 10 - macOS Sierra:<br>
+Ignores both images. Only when navigating by character (right arrow) it announces the presence of new lines and "You are currently on an image..." for both images.
+</li>
+<li>
+NVDA 2016.4 - Firefox 51 - Windows 10:<br>
+(I've refreshed the page a couple times before testing)<br>
+First image: ignored. Second image: "graphic".
+When navigating by character: first image: ignored. Second image: "graphic space space out of graphic".
+</li>
+<li>
+JAWS 17 - Internet Explorer 11 - Windows 10:<br>
+First image: "blank". Second image: "blank".
+When navigating by character: first image: "space" (two times). Second image: "space" (two times).
+</li>
+</ul>
 
 </body>
 </html>
